@@ -21,7 +21,6 @@ public class Main {
         Scanner in = new Scanner(System.in);
         System.out.println("Inserisci il paese di cui vuoi visualizzare i clienti:");
         String paese = in.nextLine();
-        paese = paese.substring(0, 1).toUpperCase() + paese.substring(1).toLowerCase();
         for (CustomerRecord record : risultati.getRecords()) {
             if (record.getCountry().equals(paese))
                 System.out.println("#" + record.getIndex() + " "+ record.getId() + " " + record.getFirstName() + " " + record.getLastName() + " " + record.getCompany() + " " + record.getCity() + " " + record.getCountry() + " " + record.getPhone1() + " " + record.getPhone2() + " " + record.getEmail() + " " + record.getSubscriptionDate() + " " + record.getWebsite());
